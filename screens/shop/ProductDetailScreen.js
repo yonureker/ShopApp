@@ -20,7 +20,9 @@ const ProductDetailScreen = props => {
   return (
     <ScrollView>
       <Image style={styles.image}source={{uri: selectedProduct.imageUrl}}/>
+      <View style={styles.actions}>
       <Button color={Colors.primary} title="Add to Cart" onPress={() => {}}/>
+      </View>
       <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>
       <Text style={styles.description}>{selectedProduct.description}</Text>
     </ScrollView>
@@ -48,7 +50,12 @@ const styles = StyleSheet.create({
   }, 
   description: {
     fontSize: 14,
-    textAlign: 'center'
+    textAlign: 'center',
+    marginHorizontal: 20
+  },
+  actions: {
+    marginVertical: 10,
+    alignItems: 'center'
   }
 });
 
